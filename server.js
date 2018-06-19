@@ -10,7 +10,7 @@ app.get('/', function(req,res){
 
 
 app.get('/test', function(req, res) {
-    request('http://api.openweathermap.org/data/2.5/group?id=935317,2988507,2995469,2972315&units=metric&APPID=3f3b2b086f571ffc6c014ae4539511a6 ', function(error, response, data) {
+    request('http://api.openweathermap.org/data/2.5/group?id=935317,2988507,2995469,524901&units=metric&APPID=3f3b2b086f571ffc6c014ae4539511a6 ', function(error, response, data) {
         var json = JSON.parse(data);
         console.log(json)
         res.json(json)

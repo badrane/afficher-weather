@@ -3,7 +3,8 @@ $.ajax({
     methode: 'get',
     success: function (data) {
         var datafor = data.list
-        console.log(datafor.nam)
-
-        // $('#test').append('pays : ' + data.name + '<br/>'+ 'Cloudiness : ' + data.weather[0].description + '<br/>'+'température : ' + data.main.temp)
+        datafor.forEach( function(liste) {
+        console.log(liste.name);
+        $('#test').append('<p class="bg-primary text-light">' + 'pays : ' + liste.name + '<br/>'+ 'température : ' + liste.main.temp  + ' <i class="fas fa-sun"></i>' +'<br/>'+ '</p>');
+        });
     }})
